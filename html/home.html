@@ -1,0 +1,31 @@
+<h1>Home</h1>
+<br>
+<br>
+<hr>
+
+<h2>Public Chatroom:</h2>
+<label for="">Message</label>
+<input type="text" ng-model='message'>
+<button ng-click='add(message)'>Add</button>
+<hr>
+
+
+<div class="container" ng-repeat='item in list track by $index'>
+  <div class="row">
+    <div class="col-xs-4">{{item.handle}}</div>
+    <div class="col-xs-4">{{item.time}}</div>
+    <div class="col-xs-1 btn btn-danger btn-sm" ng-click="list.$remove(item)" ng-show="auth.password.email === item.email">
+      <span class="glyphicon glyphicon-trash"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 message">
+      {{item.message}}
+    </div>
+  </div>
+  <hr>
+</div>
+
+<br>
+<!-- <pre>{{ list | json }}</pre> -->
+<br>

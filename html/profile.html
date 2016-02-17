@@ -1,0 +1,28 @@
+<h1>Profile</h1>
+
+<button ng-click="edit = !edit" class="btn btn-success btn-lg">Edit Profile</button>
+
+<h2>Handle: {{profile.handle}}</h2>
+<br>
+<div ng-if="edit">
+  <!-- <label for="">Handle: </label>
+  <input type="text" ng-model='profile.handle' ng-change='profile.$save()'>
+  <label for="">First: </label>
+  <input type="text" ng-model='profile.first' ng-change='profile.$save()'>
+  <label for="">Last: </label>
+  <input type="text" ng-model='profile.last' ng-change='profile.$save()'> -->
+
+  <label for="">Handle: </label>
+  <input type="text" ng-model='update.handle'>
+
+  <label for="">First Name: </label>
+  <input type="text" ng-model='update.first'>
+  <label for="">Last Name: </label>
+  <input type="text" ng-model='update.last'>
+
+  <button ng-click="updateprofile(update)" class="btn btn-success btn-lg">Update</button>
+</div>
+<br>
+<pre>{{ profile | json }}</pre>
+<br>
+

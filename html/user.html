@@ -1,0 +1,9 @@
+<h1>{{state | titlecase}}</h1>
+
+<lable>Email:</lable>
+<input type="text" ng-model='user.email'>
+<lable>Password:</lable>
+<input type="password" ng-model='user.password'>
+<lable ng-show="state === 'register'">Password (again):</lable>
+<input ng-show="state === 'register'" type="password" ng-model='user.password2'>
+<button class="btn btn-success" ng-click='submit()'>{{state | titlecase }}</button>
