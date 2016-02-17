@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('fireApp', ['firebase', 'ui.router']); 
+var app = angular.module('fireApp', ['firebase', 'ui.router', 'angularMoment']); 
 
 app.constant('fbUrl', 'https://20160128.firebaseio.com/'); 
 

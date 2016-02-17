@@ -53,14 +53,12 @@ app.factory("Profile", function($firebaseObject, fbRef) {
   });
 
   var create = function(userId) {
-    console.log("BJ ehre?");
     var ref = fbRef.child('profiles').child(userId); 
     // create an instance of User (the new operator is required)
     return new User(ref);
   }
 
   return function(userId) {
-   console.log("BJ ehre?");
     var ref = fbRef.child('profiles').child(userId); 
     return User(ref); 
   }
