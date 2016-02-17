@@ -100,7 +100,10 @@ app.controller('profileCtrl', function($scope, Profile, fbAuth) {
       $scope.profile.$save(); 
     } else {
       $scope.profile = Profile(authData.uid);
-      $scope.profile.$save(); 
+      // $scope.profile.$save(); 
+      $scope.profile.$loaded(function(data){
+        $scope.profile1 = data;
+      })
     }
 
     // $scope.placeholder = $scope.profile.handle; 
